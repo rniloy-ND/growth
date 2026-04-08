@@ -118,27 +118,27 @@ c...  calculate Cauchy stress
 c...  tangent 
       vol = K*detfe*(2.d0*detfe - 1.d0) + 2.d0/3.d0*mu*J23e*I13e
       
-      ddsdde(1,1)= (vol + 2.d0/3.d0*mu*J23e*be(1))/detf
-      ddsdde(2,2)= (vol + 2.d0/3.d0*mu*J23e*be(2))/detf
-      ddsdde(3,3)= (vol + 2.d0/3.d0*mu*J23e*be(3))/detf
-      ddsdde(1,2)= (vol - 2.d0/3.d0*mu*J23e*(be(1)+be(2)))/detf
-      ddsdde(1,3)= (vol - 2.d0/3.d0*mu*J23e*(be(1)+be(3)))/detf
-      ddsdde(2,3)= (vol - 2.d0/3.d0*mu*J23e*(be(2)+be(3)))/detf
-      ddsdde(1,4)= 1.d0/3.d0*mu*J23e*be(4)/detf
-      ddsdde(2,4)= 1.d0/3.d0*mu*J23e*be(4)/detf
-      ddsdde(3,4)=-2.d0/3.d0*mu*J23e*be(4)/detf
-      ddsdde(1,5)= 1.d0/3.d0*mu*J23e*be(5)/detf
-      ddsdde(2,5)=-2.d0/3.d0*mu*J23e*be(5)/detf
-      ddsdde(3,5)= 1.d0/3.d0*mu*J23e*be(5)/detf
-      ddsdde(1,6)=-2.d0/3.d0*mu*J23e*be(6)/detf
-      ddsdde(2,6)= 1.d0/3.d0*mu*J23e*be(6)/detf
-      ddsdde(3,6)= 1.d0/3.d0*mu*J23e*be(6)/detf
-      ddsdde(4,4)= mu*J23e*(be(1)+be(2))/2.d0/detf
-      ddsdde(5,5)= mu*J23e*(be(1)+be(3))/2.d0/detf
-      ddsdde(6,6)= mu*J23e*(be(2)+be(3))/2.d0/detf
-      ddsdde(4,5)= mu*J23e*be(6)/2.d0/detf
-      ddsdde(4,6)= mu*J23e*be(5)/2.d0/detf
-      ddsdde(5,6)= mu*J23e*be(4)/2.d0/detf
+      ddsdde(1,1)= (vol + 2.d0/3.d0*mu*J23e*be(1))/detfe
+      ddsdde(2,2)= (vol + 2.d0/3.d0*mu*J23e*be(2))/detfe
+      ddsdde(3,3)= (vol + 2.d0/3.d0*mu*J23e*be(3))/detfe
+      ddsdde(1,2)= (vol - 2.d0/3.d0*mu*J23e*(be(1)+be(2)))/detfe
+      ddsdde(1,3)= (vol - 2.d0/3.d0*mu*J23e*(be(1)+be(3)))/detfe
+      ddsdde(2,3)= (vol - 2.d0/3.d0*mu*J23e*(be(2)+be(3)))/detfe
+      ddsdde(1,4)= 1.d0/3.d0*mu*J23e*be(4)/detfe
+      ddsdde(2,4)= 1.d0/3.d0*mu*J23e*be(4)/detfe
+      ddsdde(3,4)=-2.d0/3.d0*mu*J23e*be(4)/detfe
+      ddsdde(1,5)= 1.d0/3.d0*mu*J23e*be(5)/detfe
+      ddsdde(2,5)=-2.d0/3.d0*mu*J23e*be(5)/detfe
+      ddsdde(3,5)= 1.d0/3.d0*mu*J23e*be(5)/detfe
+      ddsdde(1,6)=-2.d0/3.d0*mu*J23e*be(6)/detfe
+      ddsdde(2,6)= 1.d0/3.d0*mu*J23e*be(6)/detfe
+      ddsdde(3,6)= 1.d0/3.d0*mu*J23e*be(6)/detfe
+      ddsdde(4,4)= mu*J23e*(be(1)+be(2))/2.d0/detfe
+      ddsdde(5,5)= mu*J23e*(be(1)+be(3))/2.d0/detfe
+      ddsdde(6,6)= mu*J23e*(be(2)+be(3))/2.d0/detfe
+      ddsdde(4,5)= mu*J23e*be(6)/2.d0/detfe
+      ddsdde(4,6)= mu*J23e*be(5)/2.d0/detfe
+      ddsdde(5,6)= mu*J23e*be(4)/2.d0/detfe
 
 c...  use symmetry to fill in the rest
       do i=2, 6
